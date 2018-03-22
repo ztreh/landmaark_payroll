@@ -39,7 +39,7 @@
 		        @endif
 		      </div>
 		    </div>
-
+sfs
 		    <div class="form-group  has-feedback {{ $errors->has('name_with_initials') ? 'has-error' : '' }}">
 		      <label  class="col-sm-2 control-label">Name with initials <span class="required" >*</span></label>
 		      <div class="col-sm-8">
