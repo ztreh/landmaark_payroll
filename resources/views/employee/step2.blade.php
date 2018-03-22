@@ -34,7 +34,7 @@
 			                <option value="{{$designation->id}}">{{$designation->name}}</option>
 			      		@endforeach
 		            </select>
-d
+
 		      	@endif
 		        @if ($errors->has('employee_type_id'))
 		            <span class="help-block">
