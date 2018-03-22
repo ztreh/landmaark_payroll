@@ -25,7 +25,7 @@
 		<form class="form-horizontal" method="post" action="{{url($url)}}">
 			{{csrf_field()}}
 		  <div class="box-body">
-		    <div class="form-group">
+		    <div class="form-group  has-feedback {{ $errors->has('employee_type_id') ? 'has-error' : '' }}">
 		      <label  class="col-sm-2 control-label">Designation</label>
 		      <div class="col-sm-8">
 		      	@if(!empty($designations))
@@ -34,39 +34,64 @@
 			                <option value="{{$designation->id}}">{{$designation->name}}</option>
 			      		@endforeach
 		            </select>
+d
 		      	@endif
-		        
+		        @if ($errors->has('employee_type_id'))
+		            <span class="help-block">
+		                <strong>{{ $errors->first('employee_type_id') }}</strong>
+		            </span>
+		        @endif
 		      </div>
 		    </div>
-		    <div class="form-group">
+		    <div class="form-group  has-feedback {{ $errors->has('finger_print_id') ? 'has-error' : '' }}">
 		      <label  class="col-sm-2 control-label">Finger Print ID</label>
 		      <div class="col-sm-8">
-		        <input class="form-control" id="finger_print_id"  name="finger_print_id" placeholder="Finger Print ID" type="text">
+		        <input class="form-control" id="finger_print_id"  name="finger_print_id" placeholder="Finger Print ID" value="{{ old('finger_print_id') }}" type="text">
+		        @if ($errors->has('finger_print_id'))
+		            <span class="help-block">
+		                <strong>{{ $errors->first('finger_print_id') }}</strong>
+		            </span>
+		        @endif
 		      </div>
 		    </div>
 		    
 		    <div class="box-header with-border">
 			  <h3 class="box-title">Salary Details</h3>
 			</div>
-		    <div class="form-group">
+		    <div class="form-group  has-feedback {{ $errors->has('salary_type') ? 'has-error' : '' }}">
 		      <label  class="col-sm-2 control-label">Salary Type</label>
 		      <div class="col-sm-8">
         		    <select name="salary_type" class="form-control">
         	            <option value="0">Monthly</option>
         	            <option value="1">Daily</option>
                     </select>
+                    @if ($errors->has('salary_type'))
+			            <span class="help-block">
+			                <strong>{{ $errors->first('salary_type') }}</strong>
+			            </span>
+			        @endif
 		      </div>
 		    </div>
-		   	<div class="form-group">
+		   	<div class="form-group  has-feedback {{ $errors->has('amount') ? 'has-error' : '' }}">
 		      <label  class="col-sm-2 control-label">Amount</label>
 		      <div class="col-sm-8">
-		        <input class="form-control" id="amounts"  name="amount" placeholder="Amount" type="text">
+		        <input class="form-control" id="amounts"  name="amount" placeholder="Amount" value="{{ old('amount') }}" type="text">
+		        @if ($errors->has('amount'))
+		            <span class="help-block">
+		                <strong>{{ $errors->first('amount') }}</strong>
+		            </span>
+		        @endif
 		      </div>
 		    </div>
-		    <div class="form-group">
+		    <div class="form-group  has-feedback {{ $errors->has('effective_date') ? 'has-error' : '' }}">
 		      <label  class="col-sm-2 control-label">Efective Date</label>
 		      <div class="col-sm-8">
-		        <input class="form-control" id="effective_date"  name="effective_date" placeholder="Efective Date" type="text">
+		        <input class="form-control" id="effective_date"  name="effective_date" placeholder="Efective Date" value="{{ old('effective_date') }}" type="text">
+		        @if ($errors->has('effective_date'))
+		            <span class="help-block">
+		                <strong>{{ $errors->first('effective_date') }}</strong>
+		            </span>
+		        @endif
 		      </div>
 		    </div>
 			
@@ -84,4 +109,9 @@
 	</div>
 	
 </div>
+<script type="text/javascript">
+	  $(function(){
+	    $("#effective_date").datepicker({ format: 'yyyy-mm-dd' });
+	  });
+</script>
 @stop

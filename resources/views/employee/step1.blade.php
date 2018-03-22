@@ -43,7 +43,7 @@ sfs
 		    <div class="form-group  has-feedback {{ $errors->has('name_with_initials') ? 'has-error' : '' }}">
 		      <label  class="col-sm-2 control-label">Name with initials <span class="required" >*</span></label>
 		      <div class="col-sm-8">
-		        <input class="form-control" id="name_with_initials"  name="name_with_initials" placeholder="Name with initials" type="text">
+		        <input class="form-control" id="name_with_initials"  name="name_with_initials" placeholder="Name with initials"  value="{{ old('name_with_initials') }}"  type="text">
 		        @if ($errors->has('name_with_initials'))
 		            <span class="help-block">
 		                <strong>{{ $errors->first('name_with_initials') }}</strong>
@@ -56,7 +56,7 @@ sfs
 		    <div class="form-group  has-feedback {{ $errors->has('adress') ? 'has-error' : '' }}">
 		      <label  class="col-sm-2 control-label">Adress <span class="required" >*</span></label>
 		      <div class="col-sm-8">
-		        <input class="form-control" id="adress"  name="adress" placeholder="Adress" type="text">
+		        <input class="form-control" id="adress"  name="adress" placeholder="Adress" value="{{ old('adress') }}"  type="text">
 		        @if ($errors->has('adress'))
 		            <span class="help-block">
 		                <strong>{{ $errors->first('adress') }}</strong>
@@ -81,7 +81,7 @@ sfs
 		    <div class="form-group   has-feedback {{ $errors->has('date_of_birth') ? 'has-error' : '' }}">
 		      <label  class="col-sm-2 control-label">Date of Birth <span class="required" >*</span></label>
 		      <div class="col-sm-8" id="date_of_birth1" >
-		        <input class="form-control" id="date_of_birth"  name="date_of_birth" placeholder="Date of Birth" type="text">
+		        <input class="form-control" id="date_of_birth"  name="date_of_birth" placeholder="Date of Birth"  value="{{ old('date_of_birth') }}" type="text">
 		        @if ($errors->has('date_of_birth'))
 		            <span class="help-block">
 		                <strong>{{ $errors->first('date_of_birth') }}</strong>
@@ -92,7 +92,7 @@ sfs
 			<div class="form-group   has-feedback {{ $errors->has('nic_no') ? 'has-error' : '' }}">
 		      <label  class="col-sm-2 control-label">NIC No <span class="required" >*</span></label>
 		      <div class="col-sm-8">
-		        <input class="form-control" id="nic_no"  name="nic_no" placeholder="NIC No" type="text">
+		        <input class="form-control" id="nic_no"  name="nic_no" placeholder="NIC No"  value="{{ old('nic_no') }}" type="text">
 		        @if ($errors->has('nic_no'))
 		            <span class="help-block">
 		                <strong>{{ $errors->first('nic_no') }}</strong>
@@ -103,7 +103,7 @@ sfs
 		    <div class="form-group  has-feedback {{ $errors->has('mobile_number') ? 'has-error' : '' }}">
 		      <label  class="col-sm-2 control-label">Mobile Number <span class="required" >*</span></label>
 		      <div class="col-sm-8">
-		        <input class="form-control" id="mobile_number"  name="mobile_number" placeholder="Mobile Number" type="text">
+		        <input class="form-control" id="mobile_number"  name="mobile_number" placeholder="Mobile Number"  value="{{ old('mobile_number') }}" type="text">
 		        @if ($errors->has('mobile_number'))
 		            <span class="help-block">
 		                <strong>{{ $errors->first('mobile_number') }}</strong>
@@ -114,7 +114,7 @@ sfs
 		    <div class="form-group  has-feedback {{ $errors->has('telephone_number') ? 'has-error' : '' }}">
 		      <label  class="col-sm-2 control-label">Contact No of Home <span class="required" >*</span></label>
 		      <div class="col-sm-8">
-		        <input class="form-control" id="telephone_number"  name="telephone_number" placeholder="Contact No of Home" type="text">
+		        <input class="form-control" id="telephone_number"  name="telephone_number" placeholder="Contact No of Home"  value="{{ old('telephone_number') }}" type="text">
 		        @if ($errors->has('telephone_number'))
 		            <span class="help-block">
 		                <strong>{{ $errors->first('telephone_number') }}</strong>
@@ -214,7 +214,7 @@ sfs
 		    <div class="form-group  has-feedback {{ $errors->has('emergency_contact_name') ? 'has-error' : '' }}">
 		      <label  class="col-sm-2 control-label">Contact Name <span class="required" >*</span></label>
 		      <div class="col-sm-8">
-		        <input class="form-control" id="emergency_contact_name"  name="emergency_contact_name" placeholder="Contact Name" type="text">
+		        <input class="form-control" id="emergency_contact_name"  name="emergency_contact_name" placeholder="Contact Name"  value="{{ old('emergency_contact_name') }}" type="text">
 		        @if ($errors->has('emergency_contact_name'))
 		            <span class="help-block">
 		                <strong>{{ $errors->first('emergency_contact_name') }}</strong>
@@ -225,7 +225,7 @@ sfs
 			<div class="form-group  has-feedback {{ $errors->has('emergency_mobile_no') ? 'has-error' : '' }}">
 		      <label  class="col-sm-2 control-label">Mobile <span class="required" >*</span></label>
 		      <div class="col-sm-8">
-		        <input class="form-control" id="emergency_mobile_no"  name="emergency_mobile_no" placeholder="Mobile" type="text">
+		        <input class="form-control" id="emergency_mobile_no"  name="emergency_mobile_no" placeholder="Mobile"  value="{{ old('emergency_mobile_no') }}" type="text">
 		        @if ($errors->has('emergency_mobile_no'))
 		            <span class="help-block">
 		                <strong>{{ $errors->first('emergency_mobile_no') }}</strong>
@@ -236,7 +236,7 @@ sfs
 		    <div class="form-group  has-feedback {{ $errors->has('emergency_home_tp_no') ? 'has-error' : '' }}">
 		      <label  class="col-sm-2 control-label">Home <span class="required" >*</span></label>
 		      <div class="col-sm-8">
-		        <input class="form-control" id="emergency_home_tp_no"  name="emergency_home_tp_no" placeholder="Home" type="text">
+		        <input class="form-control" id="emergency_home_tp_no"  name="emergency_home_tp_no" placeholder="Home"  value="{{ old('emergency_home_tp_no') }}" type="text">
 		        @if ($errors->has('emergency_home_tp_no'))
 		            <span class="help-block">
 		                <strong>{{ $errors->first('emergency_home_tp_no') }}</strong>
@@ -247,7 +247,7 @@ sfs
 		    <div class="form-group  has-feedback {{ $errors->has('relationship') ? 'has-error' : '' }}">
 		      <label  class="col-sm-2 control-label">Relationship <span class="required" >*</span></label>
 		      <div class="col-sm-8">
-		        <input class="form-control" id="relationship"  name="relationship" placeholder="Relationship" type="text">
+		        <input class="form-control" id="relationship"  name="relationship" placeholder="Relationship"  value="{{ old('relationship') }}" type="text">
 		        @if ($errors->has('relationship'))
 		            <span class="help-block">
 		                <strong>{{ $errors->first('relationship') }}</strong>

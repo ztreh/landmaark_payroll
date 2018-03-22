@@ -42,6 +42,7 @@ class EmployeeController extends Controller
     public function store(Request $request)
     {
         $step=$request->input('step');
+        echo "rrrr ".$step;
         switch($step){
             case 1:
                 $this->validateData($request,$step);
@@ -56,6 +57,7 @@ class EmployeeController extends Controller
                 return  view('employee.step2',$data);
                 break;
             case 2:
+
                 $this->validateData($request,$step);
                 $employee=new Employee;
                 $employee=$this->getData($request,$employee,$step);
